@@ -66,7 +66,7 @@ public class ReservationServiceImpl implements ReservationService {
             }
         }
         if(bookedSpot==null){
-            throw new Exception("Cannot make reservation");
+            throw new Exception("Cannot make Reservation");
         }
         //occupy the spot
         bookedSpot.setOccupied(true);
