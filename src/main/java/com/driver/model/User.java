@@ -1,11 +1,9 @@
-package com.driver.Model;
+package com.driver.model;
 
-import com.driver.Enum.SpotType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,21 +14,16 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Spot {
+
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int pricePerHour;
-    @Enumerated(EnumType.STRING)
-    private SpotType spotType;
-    private boolean occupied;
+    private String name;
+    private String phoneNumber;
+    private String password;
 
-    @ManyToOne
-    @JoinColumn
-    ParkingLot parkingLot;
-
-    @OneToMany(mappedBy = "spot",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     List<Reservation> reservationList = new ArrayList<>();
-
 
 }

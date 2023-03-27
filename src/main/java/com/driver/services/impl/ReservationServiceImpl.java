@@ -1,10 +1,10 @@
 package com.driver.services.impl;
 
 import com.driver.Enum.SpotType;
-import com.driver.Model.ParkingLot;
-import com.driver.Model.Reservation;
-import com.driver.Model.Spot;
-import com.driver.Model.User;
+import com.driver.model.ParkingLot;
+import com.driver.model.Reservation;
+import com.driver.model.Spot;
+import com.driver.model.User;
 import com.driver.repository.ParkingLotRepository;
 import com.driver.repository.ReservationRepository;
 import com.driver.repository.SpotRepository;
@@ -12,8 +12,6 @@ import com.driver.repository.UserRepository;
 import com.driver.services.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {

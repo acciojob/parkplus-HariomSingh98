@@ -1,4 +1,4 @@
-package com.driver.Model;
+package com.driver.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,18 +12,17 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
+@Setter
 
-public class User {
+public class ParkingLot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String phoneNumber;
-    private String password;
+    private String address;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    List<Reservation> reservationList = new ArrayList<>();
-
+    @OneToMany(mappedBy = "parkingLot",orphanRemoval = true,cascade = CascadeType.ALL)
+    List<Spot> spotList = new ArrayList<>();
+   //orphan removal removes the spot object in parent list when in the child the spot object is deleted
 }
