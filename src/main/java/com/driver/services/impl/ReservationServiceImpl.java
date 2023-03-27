@@ -31,7 +31,7 @@ public class ReservationServiceImpl implements ReservationService {
             user = userRepository3.findById(userId).get();
         }
         catch(Exception e){
-            throw new Exception("Cannot make Reservation");
+            throw new Exception("Cannot make reservation");
         }
         //check if parkinglot exist
         ParkingLot parkingLot;
@@ -39,7 +39,7 @@ public class ReservationServiceImpl implements ReservationService {
             parkingLot = parkingLotRepository3.findById(parkingLotId).get();
         }
         catch (Exception e){
-            throw new Exception("Cannot make Reservation");
+            throw new Exception("Cannot make reservation");
         }
 
         Reservation reservation = new Reservation();
@@ -66,7 +66,7 @@ public class ReservationServiceImpl implements ReservationService {
             }
         }
         if(bookedSpot==null){
-            throw new Exception("Cannot make Reservation");
+            throw new Exception("Cannot make reservation");
         }
         //occupy the spot
         bookedSpot.setOccupied(true);
