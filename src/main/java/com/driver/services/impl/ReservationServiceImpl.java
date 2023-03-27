@@ -1,6 +1,6 @@
 package com.driver.services.impl;
 
-import com.driver.Enum.SpotType;
+import com.driver.model.SpotType;
 import com.driver.model.ParkingLot;
 import com.driver.model.Reservation;
 import com.driver.model.Spot;
@@ -71,7 +71,7 @@ public class ReservationServiceImpl implements ReservationService {
         //occupy the spot
         bookedSpot.setOccupied(true);
 
-        reservation.setNoOfHours(timeInHours);
+        reservation.setNumberOfHours(timeInHours);
         reservation.setSpot(bookedSpot);
         reservation.setUser(user);
 

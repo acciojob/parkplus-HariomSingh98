@@ -1,6 +1,5 @@
 package com.driver.model;
 
-import com.driver.Enum.PaymentMode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

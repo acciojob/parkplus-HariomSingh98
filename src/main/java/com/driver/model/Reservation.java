@@ -18,7 +18,7 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int noOfHours;
+    private int numberOfHours;
 
     @ManyToOne
     @JoinColumn

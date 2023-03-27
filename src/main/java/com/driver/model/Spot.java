@@ -1,6 +1,5 @@
 package com.driver.model;
 
-import com.driver.Enum.SpotType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
