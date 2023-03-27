@@ -60,7 +60,7 @@ public class ReservationServiceImpl implements ReservationService {
                 allowedWheels = Integer.MAX_VALUE;
 
             //check if the spot is idle for booking
-            if(allowedWheels>=numberOfWheels && !spot.isOccupied() && spot.getPricePerHour()<minPricePerHour){
+            if(allowedWheels>=numberOfWheels && !spot.getOccupied() && spot.getPricePerHour()<minPricePerHour){
                 minPricePerHour= spot.getPricePerHour();
                 bookedSpot=spot;
             }
